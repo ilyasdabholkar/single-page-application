@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+/*import {Header} from './components/Header';
+import {Footer} from './components/Footer';
+import {BrowserRouter} from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import {Home} from './components/HomeComponent';
+import {About} from './components/AboutComponent';
+import {Contact} from './components/ContactComponent';
+import {PROMOTIONS} from './shared/promotions';
+import {LEADERS} from './shared/leaders';
+import {COMMENTS} from './shared/comments';*/
 import './App.css';
+import { Component } from 'react';
+/*import { DISHES } from './shared/dishes';
+import DishDetail from './components/DishDetail';
+import Menu from './components/MenuComponent';*/
+import Main from './components/MainComponent';
+import {BrowserRouter} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+
+  render(){
+    return(
+      <BrowserRouter>
+         <Main />
+      </BrowserRouter>
+     
+    )
+  }
 }
 
 export default App;
