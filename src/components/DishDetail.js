@@ -30,11 +30,14 @@ class DishDetail extends Component {
         });
 
         return (
+            <div className="container">
             <div className="row">
                 <Breadcrumb>
                 <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
                 <BreadcrumbItem active>{this.props.dish.name}</BreadcrumbItem>
                 </Breadcrumb>
+            </div>
+            <div className="row">
                 <div className="col-12 col-md-5 mt-3 mb-3">
                     <Card>
                         <CardImg top width="100%" src={this.props.dish.image} alt="Card image cap" />
@@ -48,6 +51,7 @@ class DishDetail extends Component {
                     <h3>Comments</h3>
                     {cmt}
                 </div>
+            </div>
             </div>
         )
     }

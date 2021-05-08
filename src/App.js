@@ -14,17 +14,22 @@ import { Component } from 'react';
 import DishDetail from './components/DishDetail';
 import Menu from './components/MenuComponent';*/
 import Main from './components/MainComponent';
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { configureStore } from './redux/configureStore';
+
+const store = configureStore();
 
 class App extends Component {
 
 
-  render(){
-    return(
-      <BrowserRouter>
-         <Main />
-      </BrowserRouter>
-     
+  render() {
+    return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <Main />
+        </BrowserRouter>
+      </Provider>
     )
   }
 }
