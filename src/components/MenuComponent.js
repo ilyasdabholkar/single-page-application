@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Card, CardImg,
     CardTitle, Breadcrumb, BreadcrumbItem, CardImgOverlay
